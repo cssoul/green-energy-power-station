@@ -1,0 +1,74 @@
+:root {
+  --ink: #10202b;
+  --ink-2: #3c4d5a;
+  --ink-3: #6b7c88;
+  --line: rgba(16, 32, 43, 0.1);
+  --line-2: rgba(16, 32, 43, 0.06);
+  --card: rgba(250, 252, 253, 0.66);
+  --card-solid: rgba(252, 253, 254, 0.94);
+  --accent: #0f8fb0;
+  --accent-soft: rgba(15, 143, 176, 0.12);
+  --dc: #2f6fd0;
+  --ac: #e08a2e;
+  --store: #12a07c;
+  --grid: #d94a4a;
+  --ok: #1a9e6b;
+  --warn: #d98a15;
+  --bad: #d1483c;
+  --radius: 14px;
+  --shadow: 0 18px 44px -22px rgba(12, 32, 45, 0.42), 0 2px 10px -4px rgba(12, 32, 45, 0.16);
+  --font: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "SF Mono", "JetBrains Mono", ui-monospace, "Menlo", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #cfe3ee;
+  font-family: var(--font);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+.glass {
+  background: var(--card);
+  backdrop-filter: blur(22px) saturate(160%);
+  -webkit-backdrop-filter: blur(22px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.mono {
+  font-family: var(--mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* 滚动条 —— 面板里的长列表要细而低调 */
+.scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.scroll::-webkit-scrollbar-thumb {
+  background: rgba(16, 32, 43, 0.16);
+  border-radius: 3px;
+}
+.scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
